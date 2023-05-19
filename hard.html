@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--defined two classes .red-bg and white-bg, supposed to define the background colors only red and white-->
+  <style>
+    .red-bg {
+      background-color: red;
+    }
+
+    .white-bg {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+    <!--create two buttons with onclick attribute calls changeBackground function, changes class name as argument-->
+  <button onclick="changeBackground('red-bg')">Make Red</button>
+  <button onclick="changeBackground('white-bg')">Make White</button>
+<!--changeBackground function takes the className input as a parameter, then called, it sets the classList property of the document.body to an array containing only the className updating the class list of the body element, changing its background color based on the class.-->
+  <script>
+    function changeBackground(className) {
+      document.body.classList = [className];
+    }
+  </script>
+</body>
+</html>
